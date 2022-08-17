@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgba(93, 93, 175, 0.527);
+            color: white;
+            font: nomral
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Inciando com o dom</h1>
+    <p>Aprendendo a usar o <strong>'JavaScript'</strong><p></p>
+    <p>ola mundo</p>
+    <div id="msg">clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        //d.innerText = 'estou aguardando..'
+        //window.document.getElementById('msg').innerText = 'olá'*/ 
+        //var d = window.document.getElementsbyName('msg')[0]
+        //d.innerText = 'Olá'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+        
+
+
+
+        
+
+    </script>
+
+</body>
+</html>

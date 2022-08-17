@@ -1,0 +1,9 @@
+var n = 20
+var n1 = 2
+var res = n + n1
+
+if (res == 40){
+    console.log('voce é um otário')
+} else {
+    console.log('você é legal')
+}

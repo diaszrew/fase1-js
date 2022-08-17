@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px
+        }
+        div#res {
+            margin-top: 20px;
+        }
+        div#area{
+            background-color: lightskyblue;
+            margin-top: 80px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font: normal 18px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txtn1"> +
+    <input type="number" name=txtn2 id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <div id="area">
+        INTERAJA...
+    </div>
+    <script>
+        /* bloco = function 'ação' () {
+
+        }*/
+
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2 
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+
+        function clicar() {
+            area.innerText = 'Clicou!'
+            area.style.backgroundColor = 'red'
+
+        }
+
+        function entrar() {
+            area.innerText = 'Clique!'
+            area.style.backgroundColor = 'blue'
+            
+        }
+
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.backgroundColor = 'yellow'
+        }
+    </script>
+</body>
+</html>
